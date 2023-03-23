@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="angular.min.js"></script>
+	<script src="namecalcang.js"></script>
+	<style>
+		body {font-size: 1.5em;}
+	</style>
+	<title>Name Calculator</title>
+</head>
+<body ng-app="NameCalculator">
+	<h1>Name Calculator</h1>
+	<div ng-controller="NameCalculatorController">
+		<div>
+			Your name: <input type="text" ng-model="name" ng-keyup="displayNumeric();"/>
+		</div>
+		<div>Total Numeric value person's name is: {{totalValue}}</div>
+	</div>
+</body>
+</html>
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="app.js"></script>
+	<style>
+		body {font-size: 1.5em;}
+	</style>
+	<title>Lecture 02 - SIngle Page Web Applications with AngularJS</title>
+</head>
+<body>
+	<h1>Low Cohesion and Tight Coupling</h1>
+	<div id="nameCalculator">
+		<div>
+			Your name: <input type="text" id="name" />
+		</div>
+		<div id="output"></div>
+	</div>
+</body>
+</html>-->
