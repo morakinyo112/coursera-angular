@@ -1,25 +1,31 @@
-<!DOCTYPE html>
-<html ng-app="MsgApp">
-<head>
-    <meta charset="utf-8">
-	<script src="angular.min.js"></script>
-	<script src="expint.js"></script>
-	<style>
-		body {font-size: 1.2em;}
-	</style>
-	<title>Expressions and Interpolation</title>
-</head>
+<!doctype html>
+<html lang="en"  ng-app="LunchCheck">
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <script src="../angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
+  </head>
 <body>
-	<h1>Expressions and Interpolation</h1>
-	<div ng-controller="MsgController">
-		{{name}} has a message for you: <br>
-        {{sayMessage()}}
-        <div>
-            <button ng-click="feedMortech()">Feed Mortech</button>
-            <br />
-            <br />
-            <img ng-src="images/{{stateOfBeing}}.jpg" width="200" height="200">
-        </div>
-	</div>
+   <div class="container" ng-controller="LunchCheckController">
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group">
+             <input id="lunch-menu" type="text"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control {{lunchBorderColor}}" ng-model="lunchItems">
+         </div>
+         <div class="form-group">
+             <button class="btn btn-primary" ng-click="lunchCheck()">Check If Too Much</button>
+         </div>
+         <div class="form-group message {{lunchColor}}">
+           {{lunchMsg}}
+         </div>
+   </div>
+
 </body>
 </html>
