@@ -20,7 +20,7 @@
              class="form-control {{lunchBorderColor}}" ng-model="lunchItems">
          </div>
          <div class="form-group">
-             <button class="btn btn-primary" ng-click="lunchCheck()">Check If Too Much</button>
+             <button class="btn btn-{{lunchButtonColor}}" ng-click="lunchCheck()">Check If Too Much</button>
          </div>
          <div class="form-group message {{lunchColor}}">
            {{lunchMsg}}
